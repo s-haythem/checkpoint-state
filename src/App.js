@@ -24,14 +24,11 @@ class App extends React.Component {
   }
 
   componentDidMount = () => {
-    // start the life cycle of the  timer
     this.myInterval = setInterval(() => {
-      // the setInterval function to the myUnterval name so we can have access to it later
       this.setState((prevState) => ({
-        // setInterval is a method already built in JS
         digit: prevState.digit + 1,
       }));
-    }, 1000); // 1000= 1s which the time that i want the state to be updated after
+    }, 1000);
   };
 
   componentWillUnmount = () => {
